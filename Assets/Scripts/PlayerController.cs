@@ -1,11 +1,28 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerController : MonoBehaviour
 {
     [SerializeField] private float rotationSpeed = 25f;
     private Rigidbody rb;
+    [SerializeField] private int score = 0;
+    [SerializeField] private int key = 0;
+    public void AddScore()
+    {
+        score = score + 1;
+    }
+    public void AddKey()
+    {
+        key = key + 1;
+
+        if( key == 3)
+        {
+            SceneManager.LoadScene(0);
+        }
+    }
+
     // Start is called before the first frame update
     private void Start()
     {
@@ -38,6 +55,6 @@ public class PlayerController : MonoBehaviour
         rb.AddTorque(0, 0 ,x);
         rb.AddTorque(y, 0, 0);
 
-
+       
     }
 }

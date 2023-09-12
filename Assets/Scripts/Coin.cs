@@ -11,6 +11,8 @@ public class Coin : MonoBehaviour
         {
             Debug.Log("Get 500 bath");
             Destroy(gameObject,0.5f);
+            PlayerController player = GameObject.FindFirstObjectByType<PlayerController>();
+            player.AddScore ();
             
         }
 
