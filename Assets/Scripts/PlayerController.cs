@@ -22,6 +22,10 @@ public class PlayerController : MonoBehaviour
             SceneManager.LoadScene(0);
         }
     }
+    public int GetScore()
+    {
+        return score;
+    }
 
     // Start is called before the first frame update
     private void Start()
