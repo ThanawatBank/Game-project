@@ -6,15 +6,15 @@ using UnityEngine;
 public class KeyText : MonoBehaviour
 {
     [SerializeField] private TMP_Text text;
-    [SerializeField] private PlayerController player;
+    [SerializeField] private PlayerController playerData;
     void Start()
     {
 
     }
 
     // Update is called once per frame
-    void Update()
+    private void Update()
     {
-        text.text = player.GetKey().ToString();
+        text.text = playerData.GetKey().ToString();
     }
 }
