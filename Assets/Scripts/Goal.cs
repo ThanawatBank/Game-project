@@ -11,7 +11,7 @@ public class Goal : MonoBehaviour
         if(other.CompareTag("Player"))
         { 
             Debug.Log("End Game");
-            SceneManager.LoadScene(0);
+            SceneManager.LoadScene(1);
         }
         
     }
